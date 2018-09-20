@@ -12,7 +12,6 @@ def encode(key, clear):
 # TODO: Use an actual decryption library rather than b64 decodings
 def decode(key, enc):
     dec = []
-    print(enc)
     enc = base64.urlsafe_b64decode(enc)
     for i in range(len(enc)):
         key_c = key[i % len(key)]
