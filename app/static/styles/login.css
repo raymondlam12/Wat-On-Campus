@@ -1,0 +1,107 @@
+.vertical_center {
+  vertical-align: middle;
+}
+
+.bottom-margin {
+	margin-bottom: 30px;
+}
+
+.small-bottom-margin {
+	margin-bottom: 5px;
+}
+
+.top-margin {
+	margin-top: 60px;
+}
+
+/* CSS used to center */
+.outer {
+    display: table;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: #ffffff;
+}
+
+.middle {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.input-rounded-box {
+    border-radius: 5px;
+    border: 2px solid #419df4;
+    padding: 5px; 
+    width: auto;
+    height: auto !important; 
+    min-height: 30px
+    margin: auto;
+    display: inline-block;
+    box-shadow: none;
+    outline: none !important;
+    box-shadow: inset 0px 0px 0px 0px red;
+}
+
+.user-button {
+    border-radius: 5px;
+    border: 2px solid #419df4;
+    background-color: #5D5D5D;
+    color: #FFFFFF;
+    padding: 5px; 
+    width: 80px;
+    height: auto !important; 
+    min-height: 30px
+    margin: auto;
+    display: inline-block;
+    box-shadow: none;
+    box-shadow: inset 0px 0px 0px 0px red;
+    outline: none;
+}
+
+.user-button:hover {
+	background-color: #484848;
+	color: #FFFFFF;
+    outline: none;
+}
+
+.user-button:active {
+	background-color: #2F2F2F;
+	color: #FFFFFF;
+    outline: none;
+}
+
+input, select {
+    border: none;
+    outline: none;
+    background-color: transparent;
+ }
+
+ .register-form-label {
+    color: #484848;
+    font-size: 15px;
+    text-align: left;
+ }
+
+ .register-title {
+    color: #419df4;
+    font-size: 20px;
+    text-align: left;
+ }
+
+ .register-error-message {
+    color: #DB1111;
+    font-size: 12px;
+    text-align: left;
+ }
+
+ .register-error-message {
+    color: #DB1111;
+    font-size: 12px;
+    text-align: left;
+ }
+
+ .register-success-message {
+    color: #484848;
+    font-size: 12px;
+    text-align: left;
+ }
