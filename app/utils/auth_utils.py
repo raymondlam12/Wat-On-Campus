@@ -18,3 +18,7 @@ def decode(key, enc):
         dec_c = chr((256 + ord(enc[i]) - ord(key_c)) % 256)
         dec.append(dec_c)
     return "".join(dec)
+
+def hash_password(password):
+    # TODO: Reimplement hash after testing
+    return password

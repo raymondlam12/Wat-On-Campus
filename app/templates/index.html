@@ -19,6 +19,11 @@
         <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
         <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
+        <!-- Date Picker -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.37/js/bootstrap-datetimepicker.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/js/bootstrap-datepicker.min.js"></script>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/css/bootstrap-datepicker.standalone.min.css" rel="stylesheet"/>
+
         <!-- My Scripts -->
         <script src= "{{ url_for('static',filename='js/index.js') }}"> </script>
     </head>
@@ -28,8 +33,70 @@
                 <div class="top-margin bottom-margin">
                     <div class="container">
                         <div class="content text-center vertical_center">
-                            Home
-                            <div class="google-map" id="google-map"></div>
+                            <!-- Header Section -->
+                            <div class="bottom-margin">
+                                <h1>Wat's On Campus</h1>
+                            </div> <!-- bottom-margin -->
+
+                             <div class="container">
+                                <div>
+                                     <iframe width="500" height="400" frameborder="0" src="https://www.bing.com/maps/embed?h=400&w=500&cp=43.468890000000016~-80.54000000000002&lvl=15&typ=d&sty=r&src=SHELL&FORM=MBEDV8" scrolling="no">
+                                     </iframe>
+                                     
+                                </div>
+
+                                <br>
+                                <input type="button" class="bottom-margin user-button" id="add-event-button" value="Add Event">
+
+                                <div id="event-listing">
+                                </div>
+
+                            </div>
+
+                            <div class="modal fade" id="add-event-modal" tabindex="-1" role="dialog">
+                              <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                  <div class="modal-header">
+                                    <div class="modal-title register-title" id="register-form-title">Add Event</div>
+                                    <button type="button" class="close" data-dismiss="modal">
+                                    </button>
+                                  </div>
+                                  <div class="modal-body">
+                                    <form>
+                                        <div class="form-group">
+                                            <div class="col-form-label register-form-label">Event Title</div>
+                                            <input type="text" class="form-control" id="event-title-input">
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="col-form-label register-form-label">Description</div>
+                                            <input type="text" class="form-control" id="event-description-input">
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="col-form-label register-form-label">Location</div>
+                                            <input type="text" class="form-control" id="event-location-input">
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="col-form-label register-form-label">Date</div>
+                                            <div class='input-group date' id='date-time-picker'>
+                                                <input type='text' class="form-control" id='date-picker-input'/>
+                                                <span class="input-group-addon">
+                                                    <span class="glyphicon glyphicon-calendar"></span>
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="register-form-label" id="register-response-label"></div>
+                                    </form>
+                                  </div>
+                                  <div class="modal-footer">
+                                    <input type="button" class="btn btn-primary" id="event-register-button" value="Register">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+
+
+
                         </div>
                     </div>
                 </div>
